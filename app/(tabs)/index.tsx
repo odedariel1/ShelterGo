@@ -7,7 +7,9 @@ import React from "react";
 export default function TabOneScreen() {
   return (
     <View style={styles.container}>
+      <View style={styles.titleBorder}>
       <Text style={styles.title}>ShelterGo</Text>
+      </View>
       <View
         style={styles.separator}
         lightColor="#eee"
@@ -29,8 +31,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     color:"#569de8",
-    backgroundColor:"#e8f3ff",
     padding:10,
+  },
+  titleBorder:{
+    backgroundColor:"#e8f3ff",
+    borderRadius: 15,
   },
   separator: {
     marginVertical: 30,

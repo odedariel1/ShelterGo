@@ -61,7 +61,9 @@ const styles = StyleSheet.create({
     fontWeight:"bold",
     lineHeight: 24,
     textAlign: 'center',
-    color:"red"
+    color:"red",
+    flex: 0.4,
+
   },
   fetchButton: {
     alignItems: 'center',

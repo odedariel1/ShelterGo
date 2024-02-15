@@ -8,13 +8,9 @@ export default function TabOneScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.titleBorder}>
-      <Text style={styles.title}>ShelterGo</Text>
+      <Text style={styles.title}>𝓢𝓱𝓮𝓵𝓽𝓮𝓻𝓖𝓸</Text>
       </View>
-      <View
-        style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
+      <View style={styles.separator}/>
       <EditScreenInfo path="app/(tabs)/index.tsx" />
     </View>
   );
@@ -28,18 +24,16 @@ const styles = StyleSheet.create({
     backgroundColor:"#569de8"
   },
   title: {
-    fontSize: 20,
+    fontSize: 50,
     fontWeight: "bold",
-    color:"#569de8",
+    color:"#e8f3ff",
     padding:10,
   },
   titleBorder:{
-    backgroundColor:"#e8f3ff",
+    backgroundColor:"#569de8",
     borderRadius: 15,
   },
   separator: {
     marginVertical: 30,
-    height: 1,
-    width: "80%",
   },
 });

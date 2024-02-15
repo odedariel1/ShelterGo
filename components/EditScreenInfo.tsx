@@ -16,20 +16,20 @@ export default function EditScreenInfo({ path }: { path: string }) {
         },
         body: JSON.stringify({
           textQuery: "bomb shelter around me",
+          rankPreference: "DISTANCE",
+          locationBias:{circle:{radius:100.0,}},
         }),
       }
     );
     const {places} = await response.json();
     setHref(places[0].googleMapsUri);
-  };
-  const openURL = async (url : string) => {
-    const supported = await Linking.canOpenURL(url);
-  
-    if (supported) {
-      await Linking.openURL(url);
-    } else {
-      console.log(`Don't know how to open this URL: ${url}`);
-    }
+      const supported = await Linking.canOpenURL(href);
+    
+      if (supported) {
+        await Linking.openURL(href);
+      } else {
+        console.log(`Don't know how to open this URL: ${href}`);
+      }
   };
   return (
       <View style={styles.getStartedContainer}>
@@ -39,11 +39,8 @@ export default function EditScreenInfo({ path }: { path: string }) {
           darkColor="rgba(255,255,255,0.8)">
           Alert In Your Location Click To Find Shelter
         </Text>
-      <TouchableOpacity style={styles.fetchButton} onPress={fetchApi}>
-        <Text style={styles.textcolor}>Fetch</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.openMapButton} onPress={() => openURL(href)}>
-        <Text style={styles.textcolor}>Open Map</Text>
+      <TouchableOpacity style={styles.openMapButton} onPress={fetchApi}>
+        <Text style={styles.textcolor}>Nevigate</Text>
       </TouchableOpacity>
          </View>
   );

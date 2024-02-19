@@ -1,11 +1,8 @@
 import { Linking, StyleSheet, TouchableOpacity } from "react-native";
 import EditScreenInfo from "@/components/EditScreenInfo";
 import { Text, View } from "@/components/Themed";
-<<<<<<< HEAD
 import React, { useState } from "react";
-=======
 import React from "react";
->>>>>>> oded
 
 
 export default function TabOneScreen() {
@@ -39,7 +36,6 @@ export default function TabOneScreen() {
   };
   return (
     <View style={styles.container}>
-<<<<<<< HEAD
       <Text style={styles.title}>Tab One</Text>
       <TouchableOpacity onPress={fetchApi}>
         <Text>Fetch</Text>
@@ -52,12 +48,10 @@ export default function TabOneScreen() {
         lightColor="#eee"
         darkColor="rgba(255,255,255,0.1)"
       />
-=======
       <View style={styles.titleBorder}>
       <Text style={styles.title}>𝓢𝓱𝓮𝓵𝓽𝓮𝓻𝓖𝓸</Text>
       </View>
       <View style={styles.separator}/>
->>>>>>> oded
       <EditScreenInfo path="app/(tabs)/index.tsx" />
     </View>
   );
@@ -67,7 +61,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-<<<<<<< HEAD
     justifyContent: "center",
   },
   title: {
@@ -78,7 +71,6 @@ const styles = StyleSheet.create({
     marginVertical: 30,
     height: 1,
     width: "80%",
-=======
     paddingTop:40,
     backgroundColor:"#569de8"
   },
@@ -94,6 +86,5 @@ const styles = StyleSheet.create({
   },
   separator: {
     marginVertical: 30,
->>>>>>> oded
   },
 });

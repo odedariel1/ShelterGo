@@ -21,7 +21,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
       setLocation(location);
     })();
   }, []);
-
+//-------------------------------------------------Expo Notifications---------------
   useEffect(() => {
     // Request permissions for notifications
     const registerForPushNotificationsAsync = async () => {
@@ -54,7 +54,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
 
     sendLocalNotification();
   }, []);
-  
+  //-----------------------------------------------------------------------------------
   let long = 0.0
   let lat = 0.0
    if (location) {
